@@ -49,22 +49,39 @@
   			.uppercase {
     			text-transform: uppercase;
  			 }
+			  .imagestyle{
+                    width: 80px;
+                    height: 85px;
+                    align-content: end;
+                
+                }
 
 
 		</style>
+		<title>
+			Dummy TC Print
+			<img src=>
+		</title>
 	</head>
 
 	<body>
 		
 		<div id="pdf-content">
 		<div class="container"  >
+			<div style="width: 200px; position: absolute; padding-top: 30px; padding-left: 40px; ">
+			<img src="goldenhillslogo.jpg" class="imagestyle">
+			</div>
+			<div>
+				
 			<div style="padding-left: 160px; padding-right: 200px;">
 			<h2 class="heading" style="padding-top: 25px;">
-					 DUMMY Arts & Science College
+					DUMMY Arts & Science College
 					</h2>
 		<h2 class="heading" style="padding-bottom: 25px; font-size: 26px;">
 		Transfer & Conduct Certificate
 		</h2>
+		
+	</div>
 		<h4 style="color: red; text-align: center;"> Please verify before generate TC </h4>
 
 		<!-- Form encrypted as text -->
@@ -253,16 +270,26 @@
 
 		// Create the PDF content as an HTML string
 		const pdfContent = `
-		<div style="text-align-last: center";>
-			<h2>DUMMY Arts & Science College</h2>
-			<h6>Affiliated to University of Calicut & Recognized by Govt. of Kerala</h6>
-			<h5>place of college, District, State - Pincode</h5>
-			
-			<hr style="height: 2px; background-color: black;">
-			<br>
-			<h2>TRANSFER & CONDUCT CERTIFICATE</h2>
-			<br>
-		</div>
+
+		<div >
+                
+				<div style="width: 82px; position: relative; padding-top: 5px; align-self: right; float: left;padding-left: 10px; ">
+				<img src="goldenhillslogo.jpg" class="imagestyle">
+				</div>
+				<div style="text-align: center;">
+		
+				<h2>Dummy Arts & Science College</h2>
+				<h6>Affiliated to University of Calicut & Recognized by Govt. of Kerala</h6>
+				<h5>Place, Post, District, Kerala - Pincode</h5>
+				</div>
+				<div style="text-align: center;">
+				
+				<hr style="height: 2px; background-color: black;">
+				<br>
+				<h2>TRANSFER & CONDUCT CERTIFICATE</h2>
+				<br>
+				</div>
+				</div>
 		
 		<div style="padding-left: 50px;">
 			
