@@ -117,6 +117,7 @@
 						<option>B.A POLITICAL SCIENCE</option>
 						<option>B.SC MATHEMATICS</option>
 					</select></td>
+					<td>HONOURS<input type="checkbox" id="honours" value=" HONOURS" ></td>
 				</tr>
 				<tr class="rowdesign">
 					<td><label for="name"> <strong>Date of Admission: </strong></label></td>
@@ -176,6 +177,9 @@
 					<td colspan="3"><input class="form-control uppercase" type="text"	id="exam_appeared" name="exam_appeared" placeholder="Edit/select Examination"></td>
 					<td><select class="form-control" id="exam_selection" onchange="LastAppearedExam()">
 						<option>Select from here</option>
+						
+						<option>EIGHTH SEMESTER</option>
+						<option>SEVENTH SEMESTER</option>
 						<option>SIXTH SEMESTER</option>
 						<option>FIFTH SEMESTER</option>
 						<option>FOURTH SEMESTER</option>
@@ -251,6 +255,7 @@
 		const dobdate = formatDateToDdMmYyyy(new Date(document.getElementById('dobdate').value));
 		const dobwords = document.getElementById('dobwords').value;
 		const course = document.getElementById('course').value;
+		const honours = document.getElementById('honours').value;
 		const admission_date = formatDateToDdMmYyyy(new Date(document.getElementById('admission_date').value));
 		const admn_No = document.getElementById('admn_No').value;
 		const leaving_date = formatDateToDdMmYyyy(new Date(document.getElementById('leaving_date').value));
@@ -318,7 +323,7 @@
 		<tr>
 			<td><strong>Course</strong> </td>
 			<td> : </td>
-			<td><strong> ${course}</strong> </td>
+			<td><strong> ${course}${honours}</strong> </td>
 		</tr>
 		<tr>
 			<td><strong>Admission Date</strong> </td>
