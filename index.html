@@ -235,6 +235,12 @@
 				<tr class="rowdesign">
 					<td><label for="name"> <strong>Student's Conduct and Character: </strong></label></td>
 					<td colspan="3"><input class="form-control uppercase" type="text"	id="stcharacter" name="Character" placeholder="Enter Character"></td>
+					<td><select class="form-control" id="char_selection" onchange="charSelection()">
+						<option value=" ">Select from here</option>
+						<option value="GOOD">GOOD</option>
+						<option>SATISFACTORY</option>
+						
+					</select></td>
 				</tr>
 				<tr>
 					<td><h6 style="color: red; "> Please verify before generate TC </h6></td></tr>
@@ -426,6 +432,11 @@
 				const selreason=document.getElementById('exam_selection').value;
 				document.getElementById('exam_appeared').value = selreason;
 				document.getElementById('exam_selection').value=""
+			}
+			function charSelection(){
+				const charselect=document.getElementById('char_selection').value;
+				document.getElementById('stcharacter').value = charselect;
+				document.getElementById('char_selection').value=""
 			}
 
 
