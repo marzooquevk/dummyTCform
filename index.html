@@ -135,7 +135,7 @@ padding-right: 3px;
 			</tr>
 			<tr class="rowdesign">
 				<td><label for="name"> <strong>Date of leaving: </strong></label></td>
-				<td><input class="form-control" type="date"	id="leaving_date" name="" placeholder="Enter Name"></td>
+				<td><input class="form-control" type="date"	id="leaving_date" name="" placeholder=""></td>
 			</tr>
 			<tr class="rowdesign">
 				<td><label for="name"> <strong>From(Semester): </strong></label></td>
@@ -171,7 +171,7 @@ padding-right: 3px;
 			</tr>
 			<tr class="rowdesign">
 				<td><label for="name"> <strong>Reason for leaving: </strong></label></td>
-				<td colspan="3"><input class="form-control uppercase" type="text"	id="reason" name="reason" placeholder="Edit/select Reason" ></td>
+				<td colspan="3"><input class="form-control uppercase" type="text"	id="reason" name="reason" placeholder="Enter/select Reason" ></td>
 				<td><select class="form-control" id="reason_selection" onchange="ReasonSelection()">
 					<option value=" ">Select from here</option>
 					<option>COURSE COMPLETED</option>
@@ -182,7 +182,7 @@ padding-right: 3px;
 			</tr>
 			<tr class="rowdesign">
 				<td><label for="name"> <strong>Examination Last appeared: </strong></label></td>
-				<td colspan="3"><input class="form-control uppercase" type="text"	id="exam_appeared" name="exam_appeared" placeholder="Edit/select Examination"></td>
+				<td colspan="3"><input class="form-control uppercase" type="text"	id="exam_appeared" name="exam_appeared" placeholder="Enter/select Examination"></td>
 				<td><select class="form-control" id="exam_selection" onchange="LastAppearedExam()">
 					<option value=" ">Select from here</option>
 
@@ -201,12 +201,30 @@ padding-right: 3px;
 			</tr>
 			<tr class="rowdesign">
 				<td><label for="name"> <strong>Month & year: </strong></label></td>
-				<td colspan="3"><input class="form-control uppercase" type="text"	id="month_year" name="month_year" placeholder="Enter Month & Year"></td>
+				<td colspan="3"><input class="form-control uppercase" type="text"	id="month_year" name="month_year" placeholder="Enter/select Month & Year"></td>
+				<td><select class="form-control" id="exam_month_selection" onchange="examMonth()">
+					<option value=" ">Select from here</option>
+
+					<option value=" APRIL 20">APRIL 20</option>
+					<option value=" NOVEMBER 20">NOVEMBER 20</option>
+					<option value=""></option>
+					<option value="JANUARY 20">JANUARY 20</option>
+					<option value="FEBRUARY 20">FEBRUARY 20</option>
+					<option value="MARCH 20">MARCH 20</option>
+					<option value="MAY 20">MAY 20</option>
+					<option value="JUNE 20">JUNE 20</option>
+					<option value="JULY 20">JULY 20</option>
+					<option value="AUGUST 20">AUGUST 20</option>
+					<option value="SEPTEMBER 20">SEPTEMBER 20</option>
+					<option value="OCTOBER 20">OCTOBER 20</option>
+					<option value="DECEMBER 20">DECEMBER 20</option>
+				</select></td>
 				
 			</tr>
 			<tr class="rowdesign">
 				<td><label for="name"> <strong>Register Number: </strong></label></td>
 				<td colspan="3"><input class="form-control uppercase" type="text"	id="regno" name="regno" placeholder="Enter Register Number"></td>
+				
 			</tr>
 			<tr class="rowdesign">
 				<td><label for="name"> <strong>Whether qualified for promotion: </strong></label></td>
@@ -233,7 +251,7 @@ padding-right: 3px;
 			</tr>
 			<tr class="rowdesign">
 				<td><label for="name"> <strong>Student's Conduct and Character: </strong></label></td>
-				<td colspan="3"><input class="form-control uppercase" type="text"	id="stcharacter" name="stcharacter" placeholder="Enter Character"></td>
+				<td colspan="3"><input class="form-control uppercase" type="text"	id="stcharacter" name="stcharacter" placeholder="Enter/select Character"></td>
 				<td><select class="form-control" id="char_selection" onchange="charSelection()">
 					<option value=" ">Select from here</option>
 					<option value="GOOD">GOOD</option>
@@ -435,7 +453,12 @@ Office seal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb
 			document.getElementById('stcharacter').value = charselect;
 			document.getElementById('char_selection').value=""
 		}
-
+		
+		function examMonth(){
+			const monthSelect=document.getElementById('exam_month_selection').value;
+			document.getElementById('month_year').value = monthSelect;
+			document.getElementById('exam_month_selection').value=""
+		}
 
 		function formatDateToDdMmYyyy(date) {
 const day = String(date.getDate()).padStart(2, '0');
